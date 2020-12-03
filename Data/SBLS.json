@@ -1,0 +1,34 @@
+{
+  "SBLS0000001": {
+    "IFSC": "SBLS0000001",
+    "BRANCH": "RTGS-HO",
+    "CENTRE": "SOLAPUR",
+    "DISTRICT": "SOLAPUR",
+    "STATE": "MAHARASHTRA",
+    "ADDRESS": "2 ANTROLIKAR SHOPPING CENTER,DATTA CHWOK,4,SOLAPUR,PIN 413007,MAHARASHTRA",
+    "CONTACT": "00",
+    "BANK": "SAMARTH SAHAKARI BANK LTD",
+    "UPI": false,
+    "RTGS": true,
+    "CITY": "SOLAPUR",
+    "MICR": "NA",
+    "NEFT": true,
+    "IMPS": true
+  },
+  "SBLS00000SC": {
+    "IFSC": "SBLS00000SC",
+    "BRANCH": "NEFT SC",
+    "CENTRE": "SOLAPUR",
+    "DISTRICT": "SOLAPUR",
+    "STATE": "MAHARASHTRA",
+    "ADDRESS": "2 ANTROLIKAR SHOPPING CENTER,DATTA CHWOK,4,SOLAPUR,PIN 413007,MAHARASHTRA",
+    "CONTACT": "00",
+    "BANK": "SAMARTH SAHAKARI BANK LTD",
+    "UPI": false,
+    "RTGS": true,
+    "CITY": "SOLAPUR",
+    "NEFT": false,
+    "IMPS": true,
+    "MICR": null
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "AIRP0000001": {
+    "IFSC": "AIRP0000001",
+    "BRANCH": "AIRTEL PAYMENTS BRANCH",
+    "CENTRE": "GURGOAN",
+    "DISTRICT": "GURGOAN",
+    "STATE": "HARYANA",
+    "ADDRESS": "AIRTEL CENTER, PLAT NO-16, UDYOG VIHAR, PHASE-4, GURGOAN",
+    "CONTACT": "01244222222",
+    "BANK": "AIRTEL PAYMENTS BANK LIMITED",
+    "UPI": true,
+    "RTGS": true,
+    "CITY": "GURGOAN",
+    "MICR": "NA",
+    "NEFT": true,
+    "IMPS": true
+  },
+  "AIRP00000SC": {
+    "BANK": "Airtel Payments Bank",
+    "IFSC": "AIRP00000SC",
+    "BRANCH": "Airtel Payments Bank IMPS",
+    "CENTRE": "GURGOAN",
+    "DISTRICT": "GURGOAN",
+    "STATE": "HARYANA",
+    "ADDRESS": "AIRTEL CENTER, PLAT NO-16, UDYOG VIHAR, PHASE-4, GURGOAN",
+    "CONTACT": "01244222222",
+    "IMPS": true,
+    "CITY": "GURGOAN",
+    "UPI": true,
+    "RTGS": true,
+    "NEFT": false,
+    "MICR": null
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "MSHQ0000001": {
+    "BANK": "Mashreq Bank",
+    "IFSC": "MSHQ0000001",
+    "BRANCH": "Mashreq Bank IMPS",
+    "CENTRE": "MUMBAI",
+    "DISTRICT": "GREATER BOMBAY",
+    "STATE": "MAHARASHTRA",
+    "ADDRESS": "602 / 603, Tulsiani Chambers, Nariman Pt, Mumbai - 400 021",
+    "CONTACT": "66327200",
+    "IMPS": true,
+    "CITY": "MUMBAI",
+    "UPI": false,
+    "RTGS": true,
+    "MICR": "400205002",
+    "NEFT": true
+  }
+}

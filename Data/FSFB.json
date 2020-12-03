@@ -1,0 +1,18 @@
+{
+  "FSFB0000001": {
+    "BANK": "Fincare Small Finance Bank ",
+    "IFSC": "FSFB0000001",
+    "BRANCH": "Fincare Small Finance Bank  IMPS",
+    "CENTRE": "BENGALURU",
+    "DISTRICT": "BENGALURU",
+    "STATE": "KARNATAKA",
+    "ADDRESS": "5TH FLOOR BREN MERCURY, SARJAPUR ROAD, KAIKONDRAHALLI,BENGALURU",
+    "CONTACT": "08042504444",
+    "IMPS": true,
+    "CITY": "BENGALURU",
+    "UPI": false,
+    "MICR": "560775002",
+    "RTGS": true,
+    "NEFT": true
+  }
+}

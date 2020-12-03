@@ -1,0 +1,18 @@
+{
+  "RABO0000001": {
+    "BANK": "Rabobank International",
+    "IFSC": "RABO0000001",
+    "BRANCH": "Rabobank International IMPS",
+    "CENTRE": "MUMBAI",
+    "DISTRICT": "GREATER BOMBAY",
+    "STATE": "MAHARASHTRA",
+    "ADDRESS": "2nd Floor, Forbes Building, Charanjit Rai Marg, Fort",
+    "CONTACT": "22015566",
+    "IMPS": true,
+    "CITY": "MUMBAI",
+    "UPI": false,
+    "MICR": "400240270",
+    "RTGS": true,
+    "NEFT": true
+  }
+}

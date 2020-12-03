@@ -1,0 +1,50 @@
+{
+  "KOEX0000001": {
+    "IFSC": "KOEX0000001",
+    "BRANCH": "RTGS-HO",
+    "CENTRE": "CHENNAI",
+    "DISTRICT": "CHENNAI",
+    "STATE": "TAMIL NADU",
+    "ADDRESS": "4TH FLOOR, NO 29 BANNARI AMMAN TOWERS, DR.RADHAKRISHNAN SALAI, MYLAPORE, CHENNAI 4",
+    "CONTACT": "04449056320",
+    "BANK": "KEB HANA BANK",
+    "UPI": false,
+    "RTGS": true,
+    "CITY": "CHENNAI",
+    "MICR": "NA",
+    "NEFT": true,
+    "IMPS": true
+  },
+  "KOEX0000002": {
+    "IFSC": "KOEX0000002",
+    "BRANCH": "GURUGRAM",
+    "CENTRE": "GURUGRAM",
+    "DISTRICT": "GURUGRAM",
+    "STATE": "HARYANA",
+    "ADDRESS": "4TH FLOOR, THE OBEROI CORPORATE TOWER,BUILDING NO.11,DLF CYBERCITY, NATIONAL HIGHWAY NO.8",
+    "CONTACT": "01244168230",
+    "BANK": "KEB Hana Bank",
+    "UPI": false,
+    "RTGS": true,
+    "CITY": "GURUGRAM",
+    "MICR": "NA",
+    "NEFT": true,
+    "IMPS": true
+  },
+  "KOEX00000SC": {
+    "IFSC": "KOEX00000SC",
+    "BRANCH": "CHENNAI BRANCH",
+    "CENTRE": "CHENNAI",
+    "DISTRICT": "CHENNAI",
+    "STATE": "TAMIL NADU",
+    "ADDRESS": "4TH FLOOR, NO 29 BANNARI AMMAN TOWERS, DR.RADHAKRISHNAN SALAI, MYLAPORE, CHENNAI 4",
+    "CONTACT": "04449056320",
+    "BANK": "KEB HANA BANK",
+    "UPI": false,
+    "RTGS": true,
+    "CITY": "CHENNAI",
+    "NEFT": false,
+    "IMPS": true,
+    "MICR": null
+  }
+}

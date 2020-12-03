@@ -1,0 +1,34 @@
+{
+  "STCB0000001": {
+    "IFSC": "STCB0000001",
+    "BRANCH": "NARIMANPOINT-MUMBAI ",
+    "CENTRE": "MUMBAI",
+    "DISTRICT": "MAHARASHTRA ",
+    "STATE": "MAHARASHTRA",
+    "ADDRESS": "101,RAHEJA CENTRE 1ST FLOOR,FREE PRESS JOURNAL ROAD,NARIMANPOINT MUMBAI 400021",
+    "CONTACT": "02243028826",
+    "MICR": "400332002",
+    "BANK": "SBM BANK INDIA LIMITED",
+    "UPI": false,
+    "RTGS": true,
+    "CITY": "MUMBAI",
+    "NEFT": false,
+    "IMPS": true
+  },
+  "STCB0000065": {
+    "BANK": "State Bank of Mauritius",
+    "IFSC": "STCB0000065",
+    "BRANCH": "State Bank of Mauritius IMPS",
+    "CENTRE": "MUMBAI",
+    "DISTRICT": "MAHARASHTRA",
+    "STATE": "MAHARASHTRA",
+    "ADDRESS": "101,RAHEJA CENTRE 1ST FLOOR,FREE PRESS JOURNAL ROAD,NARIMANPOINT MUMBAI 400021",
+    "CONTACT": "02243028826",
+    "IMPS": true,
+    "CITY": "MUMBAI",
+    "UPI": false,
+    "MICR": "400332002",
+    "RTGS": true,
+    "NEFT": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "FIRN0000001": {
+    "IFSC": "FIRN0000001",
+    "BRANCH": "RTGS-HO",
+    "CENTRE": "MUMBAI",
+    "DISTRICT": "MUMBAI",
+    "STATE": "MAHARASHTRA",
+    "ADDRESS": "4TH FLOOR,TCG FINANCIAL CENTRE,C-53,G BLOCK,BANDRA KURLA COMPLEX,BANDRA EAST,MUMBAI,PINCODE-400051",
+    "CONTACT": null,
+    "BANK": "FIRSTRAND BANK",
+    "UPI": false,
+    "RTGS": true,
+    "CITY": "MUMBAI",
+    "MICR": "NA",
+    "NEFT": true,
+    "IMPS": true
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "PYTM0000001": {
+    "BANK": "Paytm Payments Bank",
+    "IFSC": "PYTM0000001",
+    "BRANCH": "Paytm Payments Bank IMPS",
+    "CENTRE": "NOIDA",
+    "DISTRICT": "Gautam Buddh Nagar",
+    "STATE": "UTTAR PRADESH",
+    "ADDRESS": "B-121,Sector-5,Noida-201301",
+    "CONTACT": "01133996699",
+    "IMPS": true,
+    "CITY": "NOIDA",
+    "UPI": true,
+    "RTGS": true,
+    "MICR": "NA",
+    "NEFT": true
+  },
+  "PYTM00000SC": {
+    "IFSC": "PYTM00000SC",
+    "BRANCH": "NOIDA BRANCH",
+    "CENTRE": "NOIDA",
+    "DISTRICT": "NOIDA",
+    "STATE": "UTTAR PRADESH",
+    "ADDRESS": "B-121, SECTOR-5",
+    "CONTACT": "01133996699",
+    "BANK": "PAYTM PAYMENTS BANK LIMITED",
+    "UPI": true,
+    "RTGS": true,
+    "CITY": "NOIDA",
+    "NEFT": false,
+    "IMPS": true,
+    "MICR": null
+  },
+  "PYTM0123456": {
+    "IFSC": "PYTM0123456",
+    "BRANCH": "Noida Branch",
+    "CENTRE": "NOIDA",
+    "DISTRICT": "Gautam Buddh Nagar",
+    "STATE": "UTTAR PRADESH",
+    "ADDRESS": "B-121, Sector-5,Noida-201301",
+    "CONTACT": "01133996699",
+    "BANK": "PAYTM PAYMENTS BANK LIMITED",
+    "UPI": true,
+    "RTGS": true,
+    "CITY": "NOIDA",
+    "MICR": "NA",
+    "NEFT": true,
+    "IMPS": true
+  }
+}

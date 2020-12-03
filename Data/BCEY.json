@@ -1,0 +1,34 @@
+{
+  "BCEY0000001": {
+    "BANK": "BANK OF CEYLON",
+    "IFSC": "BCEY0000001",
+    "BRANCH": "HEAD OFFICE",
+    "ADDRESS": "CHENNAI BRANCH, NO.1090, POONAMALLEE HIGH ROAD, CHENNAI 600 084",
+    "CONTACT": null,
+    "CITY": "CHENNAI",
+    "DISTRICT": "CHENNAI",
+    "STATE": "TAMIL NADU",
+    "MICR": "NA",
+    "NEFT": false,
+    "CENTRE": "NA",
+    "UPI": false,
+    "RTGS": false,
+    "IMPS": true
+  },
+  "BCEY0CHEN01": {
+    "BANK": "Bank of Ceylon",
+    "IFSC": "BCEY0CHEN01",
+    "BRANCH": "Bank of Ceylon IMPS",
+    "CENTRE": "CHENNAI",
+    "DISTRICT": "CHENNAI",
+    "STATE": "TAMIL NADU",
+    "ADDRESS": "1090 POONAMALLEE HIGH ROAD, AR COMPLEX, EGMORE, CHENNAI 600084",
+    "CONTACT": "914426420972",
+    "IMPS": true,
+    "CITY": "CHENNAI",
+    "UPI": false,
+    "RTGS": true,
+    "MICR": "NA",
+    "NEFT": false
+  }
+}
