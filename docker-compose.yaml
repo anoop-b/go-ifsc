@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  go-ifsc-api:
+    build:
+      context: .
+    image: go-ifsc-api:latest
+    ports:
+      - "8080:8080"
+    restart: on-failure
