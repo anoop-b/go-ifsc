@@ -33,13 +33,18 @@ A sample response is:
 {
   "BANK": "Karnataka Bank",
   "IFSC": "KARB0000001",
-  "BRANCH": "RTGS-HO",
+  "BRANCH": "Karnataka Bank IMPS",
+  "CENTRE": "NA",
+  "DISTRICT": "MANGALORE",
+  "STATE": "KARNATAKA",
   "ADDRESS": "REGD. & HEAD OFFICE, P.B.NO.599, MAHAVEER CIRCLE, KANKANADY, MANGALORE - 575002",
   "CONTACT": "2228222",
+  "IMPS": true,
   "CITY": "DAKSHINA KANNADA",
-  "RTGS": true,
-  "DISTRICT": "MANGALORE",
-  "STATE": "KARNATAKA"
+  "UPI": true,
+  "MICR": "NA",
+  "NEFT": true,
+  "RTGS": false
 }
 ```
 
