@@ -13,7 +13,27 @@ import (
 	"path/filepath"
 )
 
+//Bank struct denotes bank response struct
+type Bank struct {
+	BANK     string `json:"BANK"`
+	IFSC     string `json:"IFSC"`
+	BRANCH   string `json:"BRANCH"`
+	CENTRE   string `json:"CENTRE"`
+	DISTRICT string `json:"DISTRICT"`
+	STATE    string `json:"STATE"`
+	ADDRESS  string `json:"ADDRESS"`
+	CONTACT  string `json:"CONTACT"`
+	IMPS     bool   `json:"IMPS"`
+	CITY     string `json:"CITY"`
+	UPI      bool   `json:"UPI"`
+	MICR     string `json:"MICR"`
+	NEFT     bool   `json:"NEFT"`
+	RTGS     bool   `json:"RTGS"`
+}
+
+//GetBank is the default handler func for fetching IFSC
 func GetBank(c *gin.Context) {
+	var banks map[string]Bank
 	ifsc := c.MustGet("sanitisedIFSC").(string)
 	bankCode := ifsc[0:4]
 
@@ -30,16 +50,16 @@ func GetBank(c *gin.Context) {
 	defer jsonFile.Close()
 
 	byteValue, _ := ioutil.ReadAll(jsonFile)
-	var banks map[string]interface{}
 	err = json.Unmarshal(byteValue, &banks)
 	if err != nil {
 		log.Fatalln("Failed to unmarshal", err)
 	}
 
 	if ifsc != "" {
-		if banks[ifsc] != nil {
-			c.SecureJSON(http.StatusOK, banks[ifsc])
-			helpers.SetCache(ifsc, banks[ifsc])
+		payload, exists := banks[ifsc]
+		if exists {
+			c.SecureJSON(http.StatusOK, payload)
+			helpers.SetCache(ifsc, payload)
 			return
 		}
 		c.AbortWithStatusJSON(http.StatusNotFound, "Not Found")
