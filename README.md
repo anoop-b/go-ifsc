@@ -10,6 +10,7 @@ using docker:
 
 ```sh
 make build
+make run
 ```
 
 ### For development:
