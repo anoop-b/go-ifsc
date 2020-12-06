@@ -1,9 +1,10 @@
 package helpers
 
 import (
-	"github.com/pmylund/go-cache"
 	"log"
 	"time"
+
+	"github.com/pmylund/go-cache"
 )
 
 //using go-cache for caching, but can be easily swapped with redis/memcached etc
