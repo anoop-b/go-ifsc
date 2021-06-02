@@ -9,16 +9,19 @@ import (
 )
 
 func main() {
-	router := gin.Default()
+	server := gin.Default()
 	// Configure cors to only allow supported HTTP methods
 	config := cors.DefaultConfig()
 	config.AllowAllOrigins = true
 	config.AllowMethods = []string{"GET"}
 	config.AllowHeaders = []string{"Content-Type"}
-	router.Use(cors.New(config))
-	router.NoRoute()
+	server.Use(cors.New(config))
+	server.Use(gin.Recovery())
+	server.NoRoute()
 
-	router.GET("/bank/:ifsc", middlewares.CacheCheck, handlers.GetBank)
+	apiRoutes:= server.Group("/bank")
+	apiRoutes.Use(middlewares.CacheCheck())
+	apiRoutes.GET("/:ifsc",handlers.GetBank)
 	// Listen and serve on 0.0.0.0:8080
-	router.Run(":8080")
+	server.Run(":8080")
 }
