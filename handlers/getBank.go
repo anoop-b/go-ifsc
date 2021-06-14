@@ -3,6 +3,7 @@ package handlers
 import (
 	"encoding/json"
 	"go-ifsc/helpers"
+	"go-ifsc/models"
 
 	"github.com/gin-gonic/gin"
 
@@ -13,27 +14,9 @@ import (
 	"path/filepath"
 )
 
-//Bank struct denotes bank response struct
-type Bank struct {
-	BANK     string `json:"BANK"`
-	IFSC     string `json:"IFSC"`
-	BRANCH   string `json:"BRANCH"`
-	CENTRE   string `json:"CENTRE"`
-	DISTRICT string `json:"DISTRICT"`
-	STATE    string `json:"STATE"`
-	ADDRESS  string `json:"ADDRESS"`
-	CONTACT  string `json:"CONTACT"`
-	IMPS     bool   `json:"IMPS"`
-	CITY     string `json:"CITY"`
-	UPI      bool   `json:"UPI"`
-	MICR     string `json:"MICR"`
-	NEFT     bool   `json:"NEFT"`
-	RTGS     bool   `json:"RTGS"`
-}
-
 //GetBank is the default handler func for fetching IFSC
 func GetBank(c *gin.Context) {
-	var banks map[string]Bank
+	var banks map[string]models.Bank
 	ifsc := c.MustGet("sanitisedIFSC").(string)
 	bankCode := ifsc[0:4]
 
