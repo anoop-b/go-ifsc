@@ -22,9 +22,16 @@ func main() {
 	server.Use(gin.Recovery())
 	server.NoRoute()
 
-	apiRoutes := server.Group("/bank")
-	apiRoutes.Use(middlewares.CacheCheck())
-	apiRoutes.GET("/:ifsc", handlers.GetBank(&res))
-	// Listen and serve on 0.0.0.0:8080
+	server.POST("/login", handlers.GetAuth)
+	server.POST("/register", handlers.RegisterUser)
+
+	apiRoutes := server.Group("/api/v1")
+	{
+		apiRoutes.Use(middlewares.AuthorizeJWT())
+		apiRoutes.Use(middlewares.CacheCheck())
+
+		apiRoutes.GET("/bank/:ifsc", handlers.GetBank(&res))
+		// Listen and serve on 0.0.0.0:8080
+	}
 	server.Run(":8080")
 }
