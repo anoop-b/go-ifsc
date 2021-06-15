@@ -16,7 +16,7 @@ func main() {
 	// Configure cors to only allow supported HTTP methods
 	corsConfig := cors.DefaultConfig()
 	corsConfig.AllowAllOrigins = true
-	corsConfig.AllowMethods = []string{"GET"}
+	corsConfig.AllowMethods = []string{"GET,POST"}
 	corsConfig.AllowHeaders = []string{"Content-Type"}
 	server.Use(cors.New(corsConfig))
 	server.Use(gin.Recovery())
