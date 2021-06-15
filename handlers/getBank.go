@@ -42,7 +42,8 @@ func GetBank(c *gin.Context) {
 		payload, exists := banks[ifsc]
 		if exists {
 			c.SecureJSON(http.StatusOK, payload)
-			helpers.SetCache(ifsc, payload)
+			ck := helpers.NewCacheServer()
+			ck.SetCache(ifsc, payload)
 			return
 		}
 		c.AbortWithStatusJSON(http.StatusNotFound, "Not Found")

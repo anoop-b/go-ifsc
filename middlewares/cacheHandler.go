@@ -1,7 +1,6 @@
 package middlewares
 
 import (
-
 	"github.com/gin-gonic/gin"
 	"go-ifsc/helpers"
 
@@ -13,17 +12,17 @@ func CacheCheck() gin.HandlerFunc {
 	return func(c *gin.Context) {
 
 		ifsc, err := helpers.ValidIfsc(c.Param("ifsc"))
-		c.Set("sanitisedIFSC", ifsc)
 		if !err {
 			c.AbortWithStatusJSON(http.StatusNotFound, "Not a Valid IFSC")
+			return
 		}
-		response, exists := helpers.GetCache(ifsc)
+		c.Set("sanitisedIFSC", ifsc)
+		response, exists := helpers.NewCacheServer().GetCache(ifsc)
 		if exists {
 			log.Println("cache hit")
 			c.SecureJSON(http.StatusOK, response)
 			c.Abort()
-		} else {
-			c.Next()
+			return
 		}
 	}
 }
