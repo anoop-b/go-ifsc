@@ -1,12 +1,15 @@
 package main
 
 import (
-	"go-ifsc/handlers"
-	"go-ifsc/middlewares"
-
+	"embed"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"go-ifsc/handlers"
+	"go-ifsc/middlewares"
 )
+
+//go:embed Data/*.json
+var res embed.FS
 
 func main() {
 	server := gin.Default()
@@ -21,7 +24,7 @@ func main() {
 
 	apiRoutes := server.Group("/bank")
 	apiRoutes.Use(middlewares.CacheCheck())
-	apiRoutes.GET("/:ifsc", handlers.GetBank)
+	apiRoutes.GET("/:ifsc", handlers.GetBank(&res))
 	// Listen and serve on 0.0.0.0:8080
 	server.Run(":8080")
 }
