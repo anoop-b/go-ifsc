@@ -8,7 +8,6 @@ FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 COPY --from=builder /go/src/github.com/anoop-b/go-ifsc/app .
-COPY Data Data/
 ENV GIN_MODE=release
 EXPOSE 8080
 CMD ["./app"]
