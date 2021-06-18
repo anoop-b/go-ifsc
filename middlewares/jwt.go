@@ -7,13 +7,13 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+const BEARER_SCHEMA = "Bearer "
+
 func AuthorizeJWT() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		//const BEARER_SCHEMA = "Bearer "
-		authHeader := c.GetHeader("Token")
-		//tokenString := authHeader[len(BEARER_SCHEMA):]
+		authHeader := c.GetHeader("Authorization")
 		if authHeader != "" {
-			tokenString := authHeader
+			tokenString := authHeader[len(BEARER_SCHEMA):]
 			jwt := helpers.NewJWTService()
 			token, err := jwt.ValidateToken(tokenString)
 			if err != nil {
