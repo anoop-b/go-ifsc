@@ -1,13 +1,29 @@
-FROM golang:latest AS builder
-WORKDIR /go/src/github.com/anoop-b/go-ifsc/
-COPY . .
-RUN go mod download
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
+##
+## Build
+##
 
-FROM alpine:latest  
-RUN apk --no-cache add ca-certificates
-WORKDIR /root/
-COPY --from=builder /go/src/github.com/anoop-b/go-ifsc/app .
+FROM golang:1.16-buster AS build
+
+WORKDIR /go/src/github.com/anoop-b/go-ifsc/
+COPY .  .
+RUN go mod download
+
+RUN go build -tags=jsoniter -o /go-ifsc
+
+##
+## Deploy
+##
+
+FROM gcr.io/distroless/base
+
+WORKDIR /
+
+COPY --from=build /go-ifsc /go-ifsc
+
 ENV GIN_MODE=release
+
 EXPOSE 8080
-CMD ["./app"]
+
+USER nonroot:nonroot
+
+ENTRYPOINT ["/go-ifsc"]
