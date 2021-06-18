@@ -1,4 +1,4 @@
-package helpers
+package token
 
 import (
 	"fmt"
@@ -7,11 +7,6 @@ import (
 
 	"github.com/dgrijalva/jwt-go"
 )
-
-type JWTService interface {
-	GenerateToken(name string, password string) string
-	ValidateToken(tokenString string) (*jwt.Token, error)
-}
 
 // jwtCustomClaims are custom claims extending default ones.
 type jwtCustomClaims struct {
@@ -25,7 +20,7 @@ type jwtService struct {
 	issuer    string
 }
 
-func NewJWTService() JWTService {
+func NewJWTService() Maker {
 	return &jwtService{
 		secretKey: getSecretKey(),
 		issuer:    "go-ifsc",

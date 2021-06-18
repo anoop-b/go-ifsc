@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"go-ifsc/helpers"
+	"go-ifsc/helpers/token"
 	"go-ifsc/models"
 	"net/http"
 )
@@ -34,10 +35,10 @@ func GetAuth(c *gin.Context) {
 		return
 	}
 
-	jwt := helpers.NewJWTService()
-	token := jwt.GenerateToken(auth.Username, auth.Password)
+	jwt := token.NewJWTService()
+	jwtToken := jwt.GenerateToken(auth.Username, auth.Password)
 	c.JSON(http.StatusOK, gin.H{
-		"token": token,
+		"token": jwtToken,
 	})
 
 }

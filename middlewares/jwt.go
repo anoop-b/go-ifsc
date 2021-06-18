@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	"go-ifsc/helpers"
+	"go-ifsc/helpers/token"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -14,13 +14,13 @@ func AuthorizeJWT() gin.HandlerFunc {
 		authHeader := c.GetHeader("Authorization")
 		if authHeader != "" {
 			tokenString := authHeader[len(BEARER_SCHEMA):]
-			jwt := helpers.NewJWTService()
-			token, err := jwt.ValidateToken(tokenString)
+			jwt := token.NewJWTService()
+			jwtToken, err := jwt.ValidateToken(tokenString)
 			if err != nil {
 				c.AbortWithStatusJSON(http.StatusUnauthorized, "Not Authorised")
 				return
 			}
-			if token.Valid {
+			if jwtToken.Valid {
 				c.Next()
 				return
 			}
