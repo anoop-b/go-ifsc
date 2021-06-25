@@ -3,7 +3,7 @@ module go-ifsc
 go 1.16
 
 require (
-	github.com/dgrijalva/jwt-go v3.2.0+incompatible
+	github.com/aead/chacha20poly1305 v0.0.0-20201124145622-1a5aba2a8b29
 	github.com/gin-contrib/cors v1.3.1
 	github.com/gin-gonic/gin v1.7.2
 	github.com/go-playground/validator/v10 v10.6.1 // indirect
@@ -13,6 +13,7 @@ require (
 	github.com/mattn/go-isatty v0.0.13 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
+	github.com/o1egl/paseto v1.0.0
 	github.com/pmylund/go-cache v2.1.0+incompatible
 	github.com/ugorji/go v1.2.6 // indirect
 	golang.org/x/crypto v0.0.0-20210513164829-c07d793c2f9a // indirect
