@@ -1,11 +1,11 @@
 package handlers
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"go-ifsc/helpers"
 	"go-ifsc/helpers/token"
 	"go-ifsc/models"
+	"log"
 	"net/http"
 )
 
@@ -13,7 +13,6 @@ func GetAuth(c *gin.Context) {
 	var auth models.User
 	err := c.ShouldBindJSON(&auth)
 	if err != nil {
-		fmt.Println(err)
 		c.AbortWithStatusJSON(http.StatusForbidden, "unauthorised request")
 		return
 	}
@@ -35,10 +34,19 @@ func GetAuth(c *gin.Context) {
 		return
 	}
 
-	jwt := token.NewJWTService()
-	jwtToken := jwt.GenerateToken(auth.Username, auth.Password)
-	c.JSON(http.StatusOK, gin.H{
-		"token": jwtToken,
-	})
-
+	paseto, err := token.NewPasetoMaker()
+	if err != nil {
+		log.Panic(err.Error())
+	}
+	pasetoToken := paseto.GenerateToken(auth.Username, auth.Password)
+	c.SetCookie(
+		"token",
+		pasetoToken,
+		int(token.MaxAge.Seconds()),
+		"/",
+		"localhost",
+		false,
+		true,
+	)
+	c.String(200, "Login Successful")
 }
