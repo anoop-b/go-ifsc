@@ -1,8 +1,8 @@
 package token
 
-import "github.com/dgrijalva/jwt-go"
+import "github.com/o1egl/paseto"
 
 type Maker interface {
 	GenerateToken(name string, password string) string
-	ValidateToken(tokenString string) (*jwt.Token, error)
+	ValidateToken(tokenString string) (*paseto.JSONToken, error)
 }
