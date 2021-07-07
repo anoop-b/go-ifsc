@@ -15,4 +15,5 @@ type Bank struct {
 	MICR     string `json:"MICR"`
 	NEFT     bool   `json:"NEFT"`
 	RTGS     bool   `json:"RTGS"`
+	SWIFT    string `json:"SWIFT"`
 }
