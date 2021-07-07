@@ -26,9 +26,20 @@ Your server should now be accessible at http://localhost:8080
 
 | Route       | Method | Response |
 | ----------- | ------ | -------- |
-| /bank/:ifsc | GET    | JSON     |
+| /api/v1/bank/:ifsc  | GET    | JSON     |
+| /login      | POST   | JSON     |
+| /register   | POST   | JSON     |
 
-A sample response is:
+#### Login and Register sample payload:
+
+```json
+{
+	"user":"admin1234",
+	"password":"password1234"
+}
+```
+
+#### sample GET `:ifsc` response is:
 
 ```json
 {
@@ -49,7 +60,7 @@ A sample response is:
 }
 ```
 
-Request URL: `http://localhost:8080/bank/KARB0000001`
+Request URL: `http://localhost:8080/api/v1/bank/KARB0000001`
 
 ## Notes:
 
