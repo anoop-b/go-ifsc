@@ -12,10 +12,12 @@ import (
 	"os"
 )
 
+var banksJson map[string]models.Bank
+var bankNamesJson map[string]string
+
 //GetBank is the default handler func for fetching IFSC
 func GetBank(directory *embed.FS) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		var banks map[string]models.Bank
 		ifsc := c.MustGet("sanitisedIFSC").(string)
 		bankCode := ifsc[0:4]
 
@@ -36,13 +38,14 @@ func GetBank(directory *embed.FS) gin.HandlerFunc {
 			c.AbortWithStatusJSON(http.StatusNotFound, "Not Found")
 			return
 		}
-		err = json.Unmarshal(jsonObject, &banks)
+
+		err = json.Unmarshal(jsonObject, &banksJson)
 		if err != nil {
 			log.Fatalln("Failed to unmarshal", err)
 		}
 
 		if ifsc != "" {
-			payload, exists := banks[ifsc]
+			payload, exists := banksJson[ifsc]
 			if exists {
 				c.SecureJSON(http.StatusOK, payload)
 				ck := helpers.NewCacheServer()
