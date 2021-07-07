@@ -52,7 +52,8 @@ A sample response is:
 Request URL: `http://localhost:8080/bank/KARB0000001`
 
 ## Notes:
-
+- Checkout [`auth`](https://github.com/anoop-b/go-ifsc/tree/auth) branch for JWT auth support
+- Checkout [`paseto`](https://github.com/anoop-b/go-ifsc/tree/paseto) branch for Paseto auth support
 - Get the latest IFSC dataset from [razorpay](https://github.com/razorpay/ifsc/releases).
 - This project is inspired by [razorpay-ifsc](https://ifsc.razorpay.com/).
 
